@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+		<!-- Google Font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- My CSS -->
+		<link rel="stylesheet" href="style.css" />
+
+		<title>Frontend Mentor | Time tracking dashboard</title>
+	</head>
+	<body>
+		<main class="grid-container">
+			<!-- Profile -->
+			<section class="dashboard__widget dashboard__profile bg-neutral-400">
+				<div class="profile__header bg-700">
+					<img src="./images/image-jeremy.png" alt="Jeremy smiling" class="profile-image" />
+					<div class="profile__info">
+						<p class="text-pale-blue">Reports for</p>
+						<h2>Jeremy Robson</h2>
+					</div>
+				</div>
+				<div class="profile__footer text-desaturated-blue">
+					<p class="active" id="daily">Daily</p>
+					<p id="weekly">Weekly</p>
+					<p id="monthly">Monthly</p>
+				</div>
+			</section>
+
+			<!-- Work -->
+			<section class="work dashboard__widget text-white">
+				<div class="dashboard__header bg-100">
+					<img src="./images/icon-work.svg" alt="work icon" class="icon-image" />
+				</div>
+				<div class="dashboard__footer bg-neutral-400">
+					<div class="dashboard__footer--nav">
+						<p>Work</p>
+						<img src="./images/icon-ellipsis.svg" alt="3 dots" width="21" height="5" />
+					</div>
+					<div class="dashboard__footer--foot">
+						<h1 class="current__time fw-400">5hrs</h1>
+						<p class="text-pale-blue fw-300 previous__time">Previous - 7hrs</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Play -->
+			<section class="play dashboard__widget text-white">
+				<div class="dashboard__header bg-200">
+					<img src="./images/icon-play.svg" alt="play icon" class="icon-image" />
+				</div>
+				<div class="dashboard__footer bg-neutral-400">
+					<div class="dashboard__footer--nav">
+						<p>Play</p>
+						<img src="./images/icon-ellipsis.svg" alt="3 dots" width="21" height="5" />
+					</div>
+					<div class="dashboard__footer--foot">
+						<h1 class="current__time fw-400">1hr</h1>
+						<p class="text-pale-blue fw-300 previous__time">Previous - 2hrs</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Study -->
+			<section class="study dashboard__widget text-white">
+				<div class="dashboard__header bg-300">
+					<img src="./images/icon-study.svg" alt="study icon" class="icon-image" />
+				</div>
+				<div class="dashboard__footer bg-neutral-400">
+					<div class="dashboard__footer--nav">
+						<p>Study</p>
+						<img src="./images/icon-ellipsis.svg" alt="3 dots" width="21" height="5" />
+					</div>
+					<div class="dashboard__footer--foot">
+						<h1 class="current__time fw-400">0hrs</h1>
+						<p class="text-pale-blue fw-300 previous__time">Previous - 1hr</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Exercise -->
+			<section class="exercise dashboard__widget text-white">
+				<div class="dashboard__header bg-400">
+					<img src="./images/icon-exercise.svg" alt="exercise icon" class="icon-image" />
+				</div>
+				<div class="dashboard__footer bg-neutral-400">
+					<div class="dashboard__footer--nav">
+						<p>Exercise</p>
+						<img src="./images/icon-ellipsis.svg" alt="3 dots" width="21" height="5" />
+					</div>
+					<div class="dashboard__footer--foot">
+						<h1 class="current__time fw-400">1hr</h1>
+						<p class="text-pale-blue fw-300 previous__time">Previous - 1hr</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Social -->
+			<section class="social dashboard__widget text-white">
+				<div class="dashboard__header bg-500">
+					<img src="./images/icon-social.svg" alt="social icon" class="icon-image" />
+				</div>
+				<div class="dashboard__footer bg-neutral-400">
+					<div class="dashboard__footer--nav">
+						<p>Social</p>
+						<img src="./images/icon-ellipsis.svg" alt="3 dots" width="21" height="5" />
+					</div>
+					<div class="dashboard__footer--foot">
+						<h1 class="current__time fw-400">1hr</h1>
+						<p class="text-pale-blue fw-300 previous__time">Previous - 3hrs</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Self-care -->
+			<section class="self-care dashboard__widget text-white">
+				<div class="dashboard__header bg-600">
+					<img src="./images/icon-self-care.svg" alt="self-care icon" class="icon-image" />
+				</div>
+				<div class="dashboard__footer bg-neutral-400">
+					<div class="dashboard__footer--nav">
+						<p>Self-care</p>
+						<img src="./images/icon-ellipsis.svg" alt="3 dots" width="21" height="5" />
+					</div>
+					<div class="dashboard__footer--foot">
+						<h1 class="current__time fw-400">0hrs</h1>
+						<p class="text-pale-blue fw-300 previous__time">Previous - 1hr</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<script src="index.js"></script>
+	</body>
+</html>

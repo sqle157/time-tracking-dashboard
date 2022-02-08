@@ -1,0 +1,382 @@
+:root {
+	/* Primary Color */
+	--bg-700: hsl(246, 80%, 60%);
+	--bg-100: hsl(15, 100%, 70%);
+	--bg-200: hsl(195, 74%, 62%);
+	--bg-300: hsl(348, 100%, 68%);
+	--bg-400: hsl(145, 58%, 55%);
+	--bg-500: hsl(264, 64%, 52%);
+	--bg-600: hsl(43, 84%, 65%);
+
+	/* Neutral Color */
+	--neutral-700: hsl(226, 43%, 10%);
+	--neutral-400: hsl(235, 46%, 20%);
+	--neutral-300: hsl(235, 45%, 61%);
+	--neutral-100: hsl(236, 100%, 87%);
+
+	/* Font family */
+	--ff: "Rubik", sans-serif;
+
+	/* Font weight */
+	--fw-300: 300;
+	--fw-400: 400;
+	--fw-500: 500;
+
+	/* Font size */
+	--fs-15: 0.9375rem;
+	--fs-18: 1.125rem;
+	--fs-24: 1.5rem;
+	--fs-32: 2rem;
+	--fs-40: 2.5rem;
+	--fs-56: 3.5rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+	list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* Body */
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: var(--ff);
+	font-weight: var(--fw-400);
+	background-color: var(--neutral-700);
+}
+
+p {
+	font-size: var(--fs-18);
+	font-weight: var(--fw-300);
+}
+
+h1 {
+	font-size: var(--fs-56);
+	font-weight: var(--fw-300);
+	line-height: 1;
+}
+
+h2 {
+	font-size: var(--fs-40);
+	font-weight: var(--fw-300);
+	line-height: 1.5;
+}
+
+h1,
+h2 {
+	color: #fff;
+}
+
+/* Utilities class */
+.bg-100 {
+	background: var(--bg-100);
+}
+
+.bg-200 {
+	background: var(--bg-200);
+}
+
+.bg-300 {
+	background: var(--bg-300);
+}
+
+.bg-400 {
+	background: var(--bg-400);
+}
+
+.bg-500 {
+	background: var(--bg-500);
+}
+
+.bg-600 {
+	background: var(--bg-600);
+}
+
+.bg-700 {
+	background: var(--bg-700);
+}
+
+.bg-neutral-400 {
+	background: var(--neutral-400);
+}
+
+.text-white {
+	color: #fff;
+}
+
+.text-desaturated-blue {
+	color: var(--neutral-300);
+}
+
+.text-pale-blue {
+	color: var(--neutral-100);
+}
+
+.fw-300 {
+	font-weight: var(--fw-300);
+}
+
+.fw-400 {
+	font-weight: var(--fw-400);
+}
+
+.fw-500 {
+	font-weight: var(--fw-500);
+}
+
+.active {
+	color: #fff;
+}
+
+/* Components CSS */
+
+.grid-container {
+	display: grid;
+	grid-auto-columns: 1fr;
+	width: min(87%, 70rem);
+	padding-block: 2rem; /* padding-top and padding-bottom */
+	margin-inline: auto; /* margin-left and margin-right */
+	grid-template-areas:
+		"profile"
+		"work"
+		"play"
+		"study"
+		"exercise"
+		"social"
+		"self-care";
+	gap: 2rem;
+}
+
+.dashboard__widget {
+	border-radius: 1rem;
+	overflow: hidden;
+}
+
+.dashboard__profile .profile__header {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 1rem;
+	padding: 2.25rem;
+	border-radius: 1rem;
+}
+
+.dashboard__profile .profile-image {
+	width: 4rem;
+	border-radius: 50%;
+	border: 4px solid #fff;
+}
+
+.dashboard__profile .profile__info p {
+	font-size: var(--fs-15);
+}
+
+.dashboard__profile .profile__footer p:hover {
+	cursor: pointer;
+	color: #fafafa;
+}
+
+.dashboard__profile .profile__info h2 {
+	font-size: var(--fs-24);
+}
+
+.dashboard__profile .profile__footer {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 1.25rem;
+}
+
+.dashboard__widget .dashboard__header {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 100%;
+	height: 4.5rem;
+}
+
+.dashboard__widget .icon-image {
+	margin-top: -1.25rem;
+	margin-right: 1rem;
+	width: 4.875rem;
+}
+
+.dashboard__footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 1.5rem;
+	gap: 1rem;
+	border-radius: 1rem;
+	margin-top: -2rem;
+	position: relative;
+	z-index: 1;
+}
+
+.dashboard__footer:hover {
+	cursor: pointer;
+	background-color: var(--neutral-300);
+}
+
+.dashboard__footer .dashboard__footer--nav,
+.dashboard__footer .dashboard__footer--foot {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.dashboard__footer .dashboard__footer--foot h1 {
+	font-size: var(--fs-32);
+}
+
+/* Grid Areas */
+.dashboard__widget:nth-child(1) {
+	grid-area: profile;
+}
+
+.dashboard__widget:nth-child(2) {
+	grid-area: work;
+}
+.dashboard__widget:nth-child(3) {
+	grid-area: play;
+}
+.dashboard__widget:nth-child(4) {
+	grid-area: study;
+}
+.dashboard__widget:nth-child(5) {
+	grid-area: exercise;
+}
+.dashboard__widget:nth-child(6) {
+	grid-area: social;
+}
+
+.dashboard__widget:nth-child(7) {
+	grid-area: self-care;
+}
+
+/* Media Query */
+@media only screen and (min-width: 48em) {
+	.grid-container {
+		grid-template-areas:
+			"profile profile"
+			"work play"
+			"study exercise"
+			"social self-care";
+	}
+}
+
+@media only screen and (min-width: 75em) {
+	.grid-container {
+		grid-template-areas:
+			"profile work play study"
+			"profile exercise social self-care";
+	}
+
+	.dashboard__profile .profile__header {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 2.25rem 2.25rem 5rem 2.25rem;
+		gap: 2.5rem;
+	}
+
+	.dashboard__profile .profile__info h2 {
+		font-size: var(--fs-40);
+		line-height: 1;
+	}
+
+	.dashboard__profile .profile__footer {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 1rem;
+		padding: 2.25rem;
+	}
+
+	.dashboard__footer {
+		padding: 1.75rem;
+	}
+
+	.dashboard__footer .dashboard__footer--foot {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 1rem;
+	}
+
+	.dashboard__footer .dashboard__footer--foot h1 {
+		font-size: var(--fs-56);
+	}
+}
